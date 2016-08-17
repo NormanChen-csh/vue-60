@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+    <script src="http://cdn.bootcss.com/vue/2.0.0-rc.1/vue.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <ul class="pagination">
+            <li v-for="n in pageCount" v-bind:class="activeNumber===n?'active':''">
+                <a href="javascript:void(0)">{{n}}</a>
+            </li>
+        </ul>
+    </div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            activeNumber:1,
+            pageCount:10
+        }
+    })
+</script>
+</body>
+</html>

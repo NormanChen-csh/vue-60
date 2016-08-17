@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>60分钟vue 入门</title>
+    <script src="http://cdn.bootcss.com/vue/2.0.0-rc.1/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+<script type="text/javascript">
+    var exampleData = {
+        message:'Hello World!'
+    }
+//exampleData 数据模型 数据和模板组成
+    new Vue({
+        el:'#app',
+        data:exampleData
+    })
+</script>
+</body>
+</html>
